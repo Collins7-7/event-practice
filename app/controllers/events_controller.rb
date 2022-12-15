@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-    def idex
+    def index
         events = Event.all
         render json: events
     end
