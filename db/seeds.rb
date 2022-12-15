@@ -43,3 +43,19 @@ events = Event.create([
 ])
 
 puts "DONE!"
+
+puts "Seeding Users"
+
+
+user = User.create([
+    {
+        full_name: "Collins Muiruri",
+        email: "Collinsmuiruri77@gmail.com",
+        age: 25,
+        gender: "male",
+        password_digest: "Kituflanitu",
+        phone_number: 700766786
+    }
+])
+
+puts "Done seeding Users"

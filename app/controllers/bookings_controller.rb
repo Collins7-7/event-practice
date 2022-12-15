@@ -15,6 +15,9 @@ class BookingsController < ApplicationController
             no_of_tickets: params[:no_of_tickets].to_i,
             amount_paid: amount_to_pay
         )
+        
+        BookingsMailer.booking_confirmation(booking).deliver_now
+
         redirect_to event_path(event), notice: 'Your ticket has been booked'
     end
 
