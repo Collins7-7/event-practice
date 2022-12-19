@@ -47,7 +47,7 @@ puts "DONE!"
 puts "Seeding Users"
 
 
-user = User.create([
+users = User.create([
     {
         full_name: "Collins Muiruri",
         email: "Collinsmuiruri77@gmail.com",
@@ -55,7 +55,49 @@ user = User.create([
         gender: "male",
         password_digest: "Kituflanitu",
         phone_number: 700766786
+    },
+    {
+        full_name: "Mary Wamoro",
+        email: "Marywamoro7@gmail.com",
+        age: 30,
+        gender: "female",
+        password_digest: "wamoshi",
+        phone_number: 703261995
+    },
+
+    {
+        full_name: "Davis Ndegwa",
+        email: "Davisndegwa@gmail.com",
+        age: 26,
+        gender: "male",
+        password_digest: "chosen",
+        phone_number: 700777777
     }
 ])
 
 puts "Done seeding Users"
+
+puts "Seeding Bookings"
+
+bookings = Booking.create([
+    {
+        no_of_tickets: 10,
+        amount_paid:10000,
+        user_id: 1,
+        event_id: 1
+    },
+    {
+        no_of_tickets: 5,
+        amount_paid: 500,
+        user_id: 2,
+        event_id: 2 
+    },
+    {
+        no_of_tickets: 20,
+        amount_paid: 1000,
+        user_id: 3,
+        event_id: 3
+    }
+])
+
+puts "Done seeding Bookings"

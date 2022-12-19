@@ -21,6 +21,16 @@ class BookingsController < ApplicationController
         redirect_to event_path(event), notice: 'Your ticket has been booked'
     end
 
+    def index
+        bookings = Booking.all
+        render json: bookings
+    end
+
+    def show
+        booking = Booking.find_by(id: params[:id])
+        render json: booking
+    end
+
     private
 
     def user_params
